@@ -58,9 +58,9 @@ from pyrogram.errors.exceptions.bad_request_400 import MessageNotModified
 
 # 🧠 Bot Modules
 import auth
-import itsgolu as helper
+import tgrawan as helper
 from html_handler import html_handler
-from itsgolu import *
+from tgrawan import *
 
 from clean import register_clean_handler
 from logs import logging
@@ -89,7 +89,7 @@ bot = Client(
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN,
-    workers=300,
+    workers=600,
     sleep_threshold=60,
     in_memory=True
 )
@@ -190,11 +190,11 @@ photozip = 'https://i.ibb.co/v6Vr7HCt/1000003297.png'
 
 
 # Inline keyboard for start command
-BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/ITsGOLU_OWNER_BOT")]])
+BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/TgRawan2")]])
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/ITsGOLU_OWNER_BOT")        ],
+            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/TgRawan2")        ],
     ]
 )
 
@@ -318,10 +318,10 @@ async def start(bot: Client, m: Message):
             if not is_authorized:
                 await m.reply_photo(
                     photo=photologo,
-                    caption="**Mʏ Nᴀᴍᴇ [DRM Wɪᴢᴀʀᴅ 🦋](https://t.me/ITsGOLU_OWNER_BOT)\n\nYᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀᴄᴄᴇꜱꜱ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ʙᴏᴛ\nCᴏɴᴛᴀᴄᴛ [𝐈𝐓'𝐬𝐆𝐎𝐋𝐔.™®](https://t.me/ITsGOLU_OWNER_BOT) ғᴏʀ ᴀᴄᴄᴇꜱꜱ**",
+                    caption="**Mʏ Nᴀᴍᴇ [DRM Wɪᴢᴀʀᴅ 🦋](https://t.me/TgRawan2)\n\nYᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀᴄᴄᴇꜱꜱ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ʙᴏᴛ\nCᴏɴᴛᴀᴄᴛ [『𝐓𝐠𝐑𝐚𝐰𝐚𝐧』🐦‍🔥](https://t.me/TgRawan2) ғᴏʀ ᴀᴄᴄᴇꜱꜱ**",
                     reply_markup=InlineKeyboardMarkup([
     [
-        InlineKeyboardButton("𝐈𝐓'𝐬𝐆𝐎𝐋𝐔.™®", url="https://t.me/ITsGOLU_OWNER_BOT")
+        InlineKeyboardButton("『𝐓𝐠𝐑𝐚𝐰𝐚𝐧』🐦‍🔥", url="https://t.me/TgRawan2")
     ],
     [
         InlineKeyboardButton("ғᴇᴀᴛᴜʀᴇꜱ 🪔", callback_data="features"),
@@ -347,7 +347,7 @@ async def start(bot: Client, m: Message):
                 caption=f"**Mʏ ᴄᴏᴍᴍᴀɴᴅꜱ ғᴏʀ ʏᴏᴜ [{m.from_user.first_name} ](tg://settings)**\n\n{commands_list}",
                 reply_markup=InlineKeyboardMarkup([
     [
-        InlineKeyboardButton("𝐈𝐓'𝐬𝐆𝐎𝐋𝐔.™®", url="https://t.me/ITsGOLU_OWNER_BOT")
+        InlineKeyboardButton("『𝐓𝐠𝐑𝐚𝐰𝐚𝐧』🐦‍🔥", url="https://t.me/TgRawan2")
     ],
     [
         InlineKeyboardButton("ғᴇᴀᴛᴜʀᴇꜱ 🪔", callback_data="features"),
@@ -375,11 +375,11 @@ auth_filter = filters.create(auth_check_filter)
 @bot.on_message(~auth_filter & filters.private & filters.command)
 async def unauthorized_handler(client, message: Message):
     await message.reply(
-        "<b>Mʏ Nᴀᴍᴇ [DRM Wɪᴢᴀʀᴅ 🦋](https://t.me/ITsGOLU_OWNER_BOT)</b>\n\n"
+        "<b>Mʏ Nᴀᴍᴇ [DRM Wɪᴢᴀʀᴅ 🦋](https://t.me/TgRawan2)</b>\n\n"
         "<blockquote>You need to have an active subscription to use this bot.\n"
         "Please contact admin to get premium access.</blockquote>",
         reply_markup=InlineKeyboardMarkup([[
-            InlineKeyboardButton("💫 Get Premium Access", url="https://t.me/ITsGOLU_OWNER_BOT")
+            InlineKeyboardButton("💫 Get Premium Access", url="https://t.me/TgRawan2")
         ]])
     )
 
@@ -437,7 +437,7 @@ async def txt_handler(bot: Client, m: Message):
     editable = await m.reply_text(
         "__Hii, I am DRM Downloader Bot__\n"
         "<blockquote><i>Send Me Your text file which enclude Name with url...\nE.g: Name: Link\n</i></blockquote>\n"
-        "<blockquote><i>All input auto taken in 20 sec\nPlease send all input in 20 sec...\n</i></blockquote>"
+        "<blockquote><i>All input auto taken in 60 sec\nPlease send all input in 20 sec...\n</i></blockquote>"
     )
     input: Message = await bot.listen(editable.chat.id)
     
@@ -535,7 +535,7 @@ async def txt_handler(bot: Client, m: Message):
 )
     
     chat_id = editable.chat.id
-    timeout_duration = 3 if auto_flags.get(chat_id) else 20
+    timeout_duration = 3 if auto_flags.get(chat_id) else 60
     try:
         input0: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
         raw_text = input0.text
@@ -550,7 +550,7 @@ async def txt_handler(bot: Client, m: Message):
         return
     
     chat_id = editable.chat.id
-    timeout_duration = 3 if auto_flags.get(chat_id) else 20
+    timeout_duration = 3 if auto_flags.get(chat_id) else 60
     await editable.edit(f"**1. Enter Batch Name\n2.Send /d For TXT Batch Name**")
     try:
         input1: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
@@ -565,7 +565,7 @@ async def txt_handler(bot: Client, m: Message):
         b_name = raw_text0
     
     chat_id = editable.chat.id
-    timeout_duration = 3 if auto_flags.get(chat_id) else 20
+    timeout_duration = 3 if auto_flags.get(chat_id) else 60
     await editable.edit("**🎞️  Eɴᴛᴇʀ  Rᴇꜱᴏʟᴜᴛɪᴏɴ\n\n╭━━⪼  `360`\n┣━━⪼  `480`\n┣━━⪼  `720`\n╰━━⪼  `1080`**")
     try:
         input2: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
@@ -592,7 +592,7 @@ async def txt_handler(bot: Client, m: Message):
     except Exception:
             res = "UN"
     chat_id = editable.chat.id
-    timeout_duration = 3 if auto_flags.get(chat_id) else 20
+    timeout_duration = 3 if auto_flags.get(chat_id) else 60
 
     await editable.edit("**1. Send A Text For Watermark\n2. Send /d for no watermark & fast dwnld**")
     try:
@@ -624,7 +624,7 @@ async def txt_handler(bot: Client, m: Message):
     else:
         CR = raw_text3
     chat_id = editable.chat.id
-    timeout_duration = 3 if auto_flags.get(chat_id) else 20
+    timeout_duration = 3 if auto_flags.get(chat_id) else 60
     await editable.edit(f"**1. Send PW Token For MPD urls\n 2. Send /d For Others **")
     try:
         input4: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
@@ -633,7 +633,7 @@ async def txt_handler(bot: Client, m: Message):
     except asyncio.TimeoutError:
         raw_text4 = '/d'
     chat_id = editable.chat.id
-    timeout_duration = 3 if auto_flags.get(chat_id) else 20
+    timeout_duration = 3 if auto_flags.get(chat_id) else 60
     await editable.edit("**1. Send A Image For Thumbnail\n2. Send /d For default Thumbnail\n3. Send /skip For Skipping**")
     thumb = "/d"  # Set default value
     try:
@@ -786,7 +786,7 @@ async def txt_handler(bot: Client, m: Message):
             elif any(x in url for x in ["https://cpvod.testbook.com/", "classplusapp.com/drm/", "media-cdn.classplusapp.com", "media-cdn-alisg.classplusapp.com", "media-cdn-a.classplusapp.com", "tencdn.classplusapp", "videos.classplusapp", "webvideos.classplusapp.com"]):
                 # normalize cpvod -> media-cdn path used by API
                 url_norm = url.replace("https://cpvod.testbook.com/", "https://media-cdn.classplusapp.com/drm/")
-                api_url_call = f"https://itsgolu-cp-api.vercel.app/itsgolu?url={url_norm}@ITSGOLU_OFFICIAL&user_id={user_id}"
+                api_url_call = f"https://classplus-api.vercel.app/TgRawanBot?url={url_norm}"
                 keys_string = ""
                 mpd = None
                 try:
@@ -860,6 +860,9 @@ async def txt_handler(bot: Client, m: Message):
 
             if ".pdf*" in url:
                 url = f"https://dragoapi.vercel.app/pdf/{url}"
+                
+            elif 'https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf' in url:
+            	url = f"https://backgrounds-adopt-thought-schema.trycloudflare.com//pdf?url={url}"
             
             elif 'encrypted.m' in url:
                 appxkey = url.split('*')[1]
@@ -873,7 +876,7 @@ async def txt_handler(bot: Client, m: Message):
                 ytf = f"b[height<={raw_text2}]/bv[height<={raw_text2}]+ba/b/bv+ba"
            
             if "jw-prod" in url:
-                url = url.replace("https://apps-s3-jw-prod.utkarshapp.com/admin_v1/file_library/videos","https://d1q5ugnejk3zoi.cloudfront.net/ut-production-jw/admin_v1/file_library/videos")
+                url = f"https://backgrounds-adopt-thought-schema.trycloudflare.com//video?url={url}"
                 cmd = f'yt-dlp -o "{name}.mp4" "{url}"'
             elif "webvideos.classplusapp." in url:
                cmd = f'yt-dlp --add-header "referer:https://web.classplusapp.com/" --add-header "x-cdn-tag:empty" -f "{ytf}" "{url}" -o "{name}.mp4"'
@@ -964,16 +967,34 @@ async def txt_handler(bot: Client, m: Message):
                             time.sleep(e.x)
                             continue    
 
-                elif ".ws" in url and  url.endswith(".ws"):
+                elif ".ws" in url and url.endswith(".ws"):
                     try:
-                        await helper.pdf_download(f"{api_url}utkash-ws?url={url}&authorization={api_token}",f"{name}.html")
-                        time.sleep(1)
-                        await bot.send_document(chat_id=channel_id, document=f"{name}.html", caption=cchtml)
-                        os.remove(f'{name}.html')
-                        count += 1
+                        import aiohttp,aiofiles
+                        from html import unescape
+                        api_url=f"https://backgrounds-adopt-thought-schema.trycloudflare.com//pdf?url={url}"
+                        f=f"{name}.html"
+
+                        async with aiohttp.ClientSession() as s:
+                            async with s.get(api_url) as r:
+                                raw=await r.read()
+
+                        try:c=raw.decode("utf-8")
+                        except:c=raw.decode("latin-1")
+
+                        c=unescape(c).replace("<pre>","").replace("</pre>","")
+                        fix="<meta charset='UTF-8'><style>body{font-family:Noto Sans Devanagari,Mangal,Arial,sans-serif}</style>"
+                        c=c.replace("<head>",f"<head>{fix}",1) if "<head>" in c.lower() else f"<!doctype html><html><head>{fix}</head><body>{c}</body></html>"
+
+                        async with aiofiles.open(f,"w",encoding="utf-8") as w:
+                            await w.write(c)
+
+                        await bot.send_document(chat_id=channel_id,document=f,caption=cchtml)
+                        os.remove(f)
+                        count+=1
+
                     except FloodWait as e:
                         await m.reply_text(str(e))
-                        time.sleep(e.x)
+                        await asyncio.sleep(e.x)
                         continue    
                             
                 elif any(ext in url for ext in [".jpg", ".jpeg", ".png"]):
@@ -1085,7 +1106,7 @@ async def txt_handler(bot: Client, m: Message):
         f"├ 🖼️ ɪᴍᴀɢᴇꜱ : <code>{img_count}</code>\n"
         "╰────────────────────────────\n\n"
         
-        "<i>ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ᴡɪᴢᴀʀᴅ ʙᴏᴛꜱ 🤖</i>"
+        "<i>ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ᴛɢ-ʀᴀᴡᴀɴ ʙᴏᴛꜱ 🤖</i>"
     )
 )
 
@@ -1093,48 +1114,6 @@ async def txt_handler(bot: Client, m: Message):
         await bot.send_message(channel_id, f"<b>-┈━═.•°✅ Completed ✅°•.═━┈-</b>\n<blockquote><b>🎯Batch Name : {b_name}</b></blockquote>\n<blockquote>🔗 Total URLs: {len(links)} \n┃   ┠🔴 Total Failed URLs: {failed_count}\n┃   ┠🟢 Total Successful URLs: {success_count}\n┃   ┃   ┠🎥 Total Video URLs: {video_count}\n┃   ┃   ┠📄 Total PDF URLs: {pdf_count}\n┃   ┃   ┠📸 Total IMAGE URLs: {img_count}</blockquote>\n")
         await bot.send_message(m.chat.id, f"<blockquote><b>✅ Your Task is completed, please check your Set Channel📱</b></blockquote>")
 
-
-
-
-@bot.on_message(filters.text & filters.private)
-async def text_handler(bot: Client, m: Message):
-    if m.from_user.is_bot:
-        return
-    links = m.text
-    path = None
-    match = re.search(r'https?://\S+', links)
-    if match:
-        link = match.group(0)
-    else:
-        await m.reply_text("<pre><code>Invalid link format.</code></pre>")
-        return
-        
-    editable = await m.reply_text(f"<pre><code>**🔹Processing your link...\n🔁Please wait...⏳**</code></pre>")
-    await m.delete()
-
-    await editable.edit(f"╭━━━━❰ᴇɴᴛᴇʀ ʀᴇꜱᴏʟᴜᴛɪᴏɴ❱━━➣ \n┣━━⪼ send `144`\n┣━━⪼ send `240`\n┣━━⪼ send `360`\n┣━━⪼ send `480`\n┣━━⪼ send `720`\n┣━━⪼ send `1080`\n╰━━⌈⚡[`{CREDIT}`]⚡⌋━━➣ ")
-    input2: Message = await bot.listen(editable.chat.id, filters=filters.text & filters.user(m.from_user.id))
-    raw_text2 = input2.text
-    quality = f"{raw_text2}p"
-    await input2.delete(True)
-    try:
-        if raw_text2 == "144":
-            res = "256x144"
-        elif raw_text2 == "240":
-            res = "426x240"
-        elif raw_text2 == "360":
-            res = "640x360"
-        elif raw_text2 == "480":
-            res = "854x480"
-        elif raw_text2 == "720":
-            res = "1280x720"
-        elif raw_text2 == "1080":
-            res = "1920x1080" 
-        else: 
-            res = "UN"
-    except Exception:
-            res = "UN"
-    # ... rest of the function logic would continue here ...
 
 # New Callback Handlers for the buttons
 @bot.on_callback_query(filters.regex("features"))
@@ -1164,9 +1143,9 @@ async def details_callback(client, callback_query: CallbackQuery):
     await callback_query.answer()
     details_text = (
         "**📋 Bot Details 📋**\n\n"
-        "• 🤖 Bot Name: DRM Wizard 🦋\n"
-        "• 👨‍💻 Developer: IT'sGOLU.™®\n"
-        "• 📱 Contact: @ITsGOLU_OWNER_BOT\n"
+        "• 🤖 Bot Name: DRM TgRawan 🦋\n"
+        "• 👨‍💻 Developer: 『𝐓𝐠𝐑𝐚𝐰𝐚𝐧』🐦‍🔥\n"
+        "• 📱 Contact: @TgRawan2Bot\n"
         "• 🔄 Version: 1.0\n"
         "• 📝 Language: Python\n"
         "• 🛠️ Framework: Pyrogram\n\n"
@@ -1208,7 +1187,7 @@ async def back_to_start_callback(client, callback_query: CallbackQuery):
         ),
         reply_markup=InlineKeyboardMarkup([
             [
-                InlineKeyboardButton("𝐈𝐓'𝐬𝐆𝐎𝐋𝐔.™®", url="https://t.me/ITsGOLU_OWNER_BOT")
+                InlineKeyboardButton("『𝐓𝐠𝐑𝐚𝐰𝐚𝐧』🐦‍🔥", url="https://t.me/TgRawan2")
             ],
             [
                 InlineKeyboardButton("ғᴇᴀᴛᴜʀᴇꜱ 🪔", callback_data="features"),
